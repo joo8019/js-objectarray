@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>question</h3>
+    <p>"let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+        {name: 'Baba', id: 101, marks : 23 },
+        {name: 'yaga', id: 200, marks : 45 },
+        {name: 'Wick', id: 115, marks : 75 } ] "
+</p>
+
+<h3>Q1</h3>
+<P>"We are interested in retrieving only the students' names; all the names should be in caps.
+
+    ['JOHN', 'BABA', 'YAGA', 'WICK']"
+    </P>
+    <pre>ans:let result=[];
+        for(let arr of studentRecords){
+          result.push(arr.name.toUpperCase());
+        }
+        console.log(result);</pre>
+
+
+  <h3>Q2</h3>
+  <p>"Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+
+    [{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"
+    </p>
+    <pre>ans:let marks=[];
+        for(let arr of studentRecords){
+            if(arr.marks>50){
+        marks.push(arr);
+            }
+        }
+        console.log(marks);</pre>
+
+<h3>Q3</h3>
+<p>Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.
+</p>    
+<pre>ans:let id=[];
+    for(let arr of studentRecords){
+        if(arr.marks>50 && arr.id>120){
+    id.push(arr);
+        }
+    }
+    console.log(id);</pre>
+
+
+<h3>Q4</h3>
+<p>Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.
+</p>
+<pre>ans: let sum=0;
+    for(let arr of studentRecords){
+if(arr.marks>50 && arr.id>120){
+    sum +=arr.marks;
+}
+    }
+    console.log(sum);
+</pre>
+
+
+<h3>Q5</h3>
+<p>This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.
+</p>
+<pre>ans:let name=[];
+    for(let arr of studentRecords){
+        if(arr.marks>50){
+            name.push(arr.name);
+        }
+    }
+    console.log(name);</pre>
+
+
+    <h3>Q6</h3>
+    <p>This time we are required to print the sum of marks of the students with id > 120.
+    </p>
+    <pre>ans:let idsum=0;
+        for(let arr of studentRecords){
+            if(arr.id>120){
+                idsum+=arr.marks;
+            }
+        }
+        console.log(idsum);
+        </pre>
+
+
+   <h3>Q7</h3>
+   <p>This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.
+</p>
+<pre>ans:let result1=[];
+    for(let arr of studentRecords){
+        if(arr.marks<50){
+            arr.marks+=15;
+        }
+        if(arr.marks>50){
+            result1.push(arr.marks);
+        }
+    }
+    console.log(result1);</pre>
+
+    <h3>Q8</h3>
+    <p>Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. 
+    </p>
+    <pre>ans:let ar = [];
+        let obj1 = {
+          name: "jyothsna",
+          class: "Js",
+          rollno: "1"
+        }
+        let obj2 = {
+          name: "salman",
+          class: "Js",
+          rollno: "2"
+        }
+        let obj3 = {
+          name: "kiran",
+          class: "Js",
+          rollno: "3"
+        }
+        let obj4 = {
+          name: "shashi",
+          class: "Js",
+          rollno: "4"
+        }
+        let obj5 = {
+          name: "harshu",
+          class: "Js",
+          rollno: "5"
+        }
+        let obj6 = {
+          name: "rajiv",
+          class: "Js",
+          rollno: "6"
+        }
+        ar.push(obj1, obj2, obj3, obj4, obj5, obj6);
+        console.log(ar);</pre>
+    
+
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
